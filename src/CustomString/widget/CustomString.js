@@ -67,6 +67,7 @@ define([
 
         _updateRendering : function (callback) {
             logger.debug(this.id + "._updateRendering");
+            if ( this._contextObj == null || typeof this._contextObj == "undefined" ) return;
             mx.ui.action(this.sourceMF, {
                 params: {
                     applyto     : "selection",
